@@ -1,17 +1,17 @@
-:root{
+:root {
 
-    --primary-color-1 : hsl(225 100% 94%);
-    --primary-color-2 : hsl(224, 23%, 55%);
+    --primary-color-1: hsl(225 100% 94%);
+    --primary-color-2: hsl(224, 23%, 55%);
 
-    --accent-color-1 : hsl(225 100% 98%);
-    --accent-color-2 : hsl(224 23% 55%);
-    --accent-color-3 : hsl(223 47% 23%);
+    --accent-color-1: hsl(225 100% 98%);
+    --accent-color-2: hsl(224 23% 55%);
+    --accent-color-3: hsl(223 47% 23%);
 
-    --primary-ff : 'Red Hat Display', sans-serif;
+    --primary-ff: 'Red Hat Display', sans-serif;
 
-    --font-weight-500 : 500;
-    --font-weight-700 : 700;
-    --font-weight-900 : 900;
+    --font-weight-500: 500;
+    --font-weight-700: 700;
+    --font-weight-900: 900;
 
 }
 
@@ -22,28 +22,29 @@ body {
     text-align: center;
     font-family: var(--primary-ff);
     font-weight: var(--font-weight-500);
-    font-size : 1rem;
+    font-size: 1rem;
     background-color: var(--primary-color-1);
     background-image: url(/images/pattern-background-desktop.svg);
     background-repeat: no-repeat;
+    background-position-y: -200px;
 }
 
-main{
+main {
     background-color: white;
-    width: 350px;
+    width: 375px;
     border-radius: 1rem;
 }
 
-.img{
+.img {
     width: 100%;
     border-radius: 1rem 1rem 0 0;
 }
 
-.text{
+.text {
     padding: 1rem 2rem 1rem;
 }
 
-h1{
+h1 {
     font-size: 1.5rem;
     font-weight: var(--font-weight-900);
 }
@@ -65,36 +66,42 @@ h2 {
     border-radius: 1rem;
     align-items: center;
     justify-items: center;
-}  
+}
 
-img{
+img {
     grid-row: span 2;
 }
 
 .change {
     grid-row: span 2;
+    font-size: 12px;
+    color: darkblue;
 }
 
-.pricing :nth-child(2){
+.change:hover {
+    color: #766CF1;
+    text-decoration: none;
+    font-weight: var(--font-weight-700);
+}
+
+.pricing :nth-child(2) {
     font-weight: var(--font-weight-900);
     font-size: 13px;
 }
 
-.pricing :nth-child(4){
-    font-size: 0.90rem;
+.pricing :nth-child(4) {
+    font-size: 13px;
     font-weight: var(--font-weight-500);
     color: var(--accent-color-2);
 }
 
-.pricing :last-child , .pricing :nth-child(2){
-        margin: auto 0px;
-        justify-self: flex-start;    
-    }
+.pricing :last-child,
+.pricing :nth-child(2) {
+    margin: auto 0px;
+    justify-self: flex-start;
+}
 
-    .pricing :nth-child(3){
-        font-size: 12px;
-        color: darkblue;
-    }
+.pricing :nth-child(3) {}
 
 .btn {
     display: block;
@@ -107,15 +114,24 @@ img{
     font-weight: var(--font-weight-700);
     font-size: 12px;
     border-radius: 10px;
-    box-shadow: 0px 10px 10px #1e1fcd30 ;
+    box-shadow: 0px 15px 10px #1e1ecd20;
 }
 
+.btn:hover{
+        background-color: #766CF1;
+        box-shadow: 0px 15px 10px #766CF120;
+    }
 
-.cancel{
+
+.cancel {
     margin-top: 1rem;
     color: var(--primary-color-2);
     font-weight: var(--font-weight-700);
-    font-size: 12px;
+    font-size: 13px;
+}
+
+.cancel:hover{
+    color: var(--accent-color-3);
 }
 
 a:not(.change) {
